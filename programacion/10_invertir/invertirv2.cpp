@@ -17,7 +17,6 @@ int main(){
 	numero/=BASE;
 
     	numero_acumulado = numero_acumulado*BASE + numero%BASE;
-	numero/=BASE;
 
     printf("\n");
 
