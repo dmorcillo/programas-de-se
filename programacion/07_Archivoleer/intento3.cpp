@@ -1,17 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(){
-
-    FILE *pf;
+int main(int argc, char **agrv){
 
     int resultado = 0;
     int entrada;
+    FILE *pf;
 
-    pf = fopen("numeros", "r");
+    pf = fopen("numeros.in", "r");
     while(!feof(pf)){
-    fscanf(pf, " %i", &entrada);
-    resultado += entrada;
+         fscanf(pf, " %i", &entrada);
+         resultado += entrada;
     }
     fclose(pf);
 
