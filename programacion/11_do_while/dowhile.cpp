@@ -10,8 +10,8 @@ int main(){
     scanf(" %s", nombre);
 
     do{
-    numero += 1;
-    printf("Tu nombre es: %s", nombre);
+       printf("Tu nombre es: %s\n", nombre);
+       numero ++;
     }while (numero != 77 );
 
     return EXIT_SUCCESS;
