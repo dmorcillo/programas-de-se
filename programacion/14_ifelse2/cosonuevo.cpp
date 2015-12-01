@@ -9,24 +9,41 @@
 int main(){
     int componente[2];
 
-    char color;
+    char respuesta;
 
-    printf("¿El color que ves es rojo?: "); //Preguntar al usuario que ve.
-    scanf(" %c", &respuesta);               //Escanear lo que ha escrito.
+    printf("¿El color que ves es rojo? (s/N): ");
+    scanf(" %c", &respuesta);
     componente[ROJO] = tolower(respuesta) == 's';
-    printf("El color que ves es azul?: ");  //Preguntarle el segundo valor.
-    scanf(" %c", &respuesta);		    //Escanear el segundo valor.
+    printf("El color que ves es azul? (s/N): ");
+    scanf(" %c", &respuesta);
     componente[AZUL] = tolower(respuesta) == 's';
+    printf("El color que ves es amarillo? (s/N): ");
+    scanf(" %c", &respuesta); 
+    componente[AMAR] = tolower(respuesta) == 's';
 
-    if (componente[ROJO] & componente[AZUL])    		//Si el resultado ha sido 1, se ha escrito un 1 en los 2.
-        printf("Ves morado\n");	  	//Por lo tanto, imprimir morado.
-    else 			  	//Si uno de los 2 colores ha sido un 0, comprobar cual es.
-    	if (componente[ROJO])       		//Si el que tiene el 1 es el color1.
-	    printf("Ves rojo\n"); 	//Imprimir que ves rojo.
-        else			  	//Si el color1 es un 0, pasar al color2.
-    	    if (componente[AZUL])	 	 	//Si el color2 es un 1.
-	    printf("Ves azul\n"); 	//Imprimir que ves azul.
-	else printf("Ves negro\n"); 	//Si ninguno de los 2 anteriores ha sido 1, imprimir que ves negro.
+
+    if (componente[ROJO] & componente[AZUL] & componente[AMAR])
+	printf("Ves blanco\n");
+    else
+    	if (componente[ROJO] & componente[AZUL]) 
+      	printf("Ves morado\n");
+    	else	  	
+    	    if (componente[ROJO] & componente[AMAR])
+	    printf("Ves naranja\n");
+            else
+    	        if (componente[AZUL] & componente[AMAR])
+	    	printf("Ves verde\n");
+	        else
+		    if (componente[ROJO])
+    		    printf("Ves rojo\n");
+		    else
+			if (componente[AZUL])
+    			printf("Ves azul\n");
+			else
+			    if (componente[AMAR])
+    			    printf("Ves amarillo\n");
+			    else
+		            printf("Ves negro\n");
     
     return EXIT_SUCCESS;
 }
