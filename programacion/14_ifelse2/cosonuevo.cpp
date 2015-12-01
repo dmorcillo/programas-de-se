@@ -2,12 +2,14 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#define ROJO 0
-#define AZUL 1
+#define ROJO 1
+#define AZUL 2
+#define AMAR 4
+
 int main(){
     int componente[2];
 
-    char respuesta;
+    char color;
 
     printf("¿El color que ves es rojo?: "); //Preguntar al usuario que ve.
     scanf(" %c", &respuesta);               //Escanear lo que ha escrito.
