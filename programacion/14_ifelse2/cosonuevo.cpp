@@ -18,16 +18,16 @@ int main(){
     scanf(" %c", &respuesta);
     componente[AZUL] = tolower(respuesta) == 's';
     printf("El color que ves es amarillo? (s/N): ");
-    scanf(" %c", &respuesta); 
+    scanf(" %c", &respuesta);
     componente[AMAR] = tolower(respuesta) == 's';
 
 
     if (componente[ROJO] & componente[AZUL] & componente[AMAR])
 	printf("Ves blanco\n");
     else
-    	if (componente[ROJO] & componente[AZUL]) 
+    	if (componente[ROJO] & componente[AZUL])
       	printf("Ves morado\n");
-    	else	  	
+    	else
     	    if (componente[ROJO] & componente[AMAR])
 	    printf("Ves naranja\n");
             else
@@ -44,6 +44,6 @@ int main(){
     			    printf("Ves amarillo\n");
 			    else
 		            printf("Ves negro\n");
-    
+
     return EXIT_SUCCESS;
 }
